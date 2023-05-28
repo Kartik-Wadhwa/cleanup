@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cleanup/static/css/main.9d288641.css",
+    "main.js": "/cleanup/static/js/main.70edafc0.js",
+    "index.html": "/cleanup/index.html",
+    "main.9d288641.css.map": "/cleanup/static/css/main.9d288641.css.map",
+    "main.70edafc0.js.map": "/cleanup/static/js/main.70edafc0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d288641.css",
+    "static/js/main.70edafc0.js"
+  ]
+}
