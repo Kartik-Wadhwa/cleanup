@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.socialMedia{
+    display:flex;
+    position:relative;
+    margin-right:50px;
+    margin-left:50px;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    border:4px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    transition: 0.5s;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+}
+
+.innerBox {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin-left: 20px;
+    margin-right:10px;
+    padding: 20px;
+    max-width: 400px;
+    height: 330px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .captureButton{
+    margin-bottom: 1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    max-height: 10px;
+    color:green;
+  }
+
+  .captureButton:hover{
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .saveButton{
+    position: relative;
+    margin-left:-200px;
+    margin-top: 5px;
+    border:unset;
+    background-color:unset;
+    color:green;
+    cursor: pointer;
+  }
+
+  .discardButton{
+    position: relative;
+    margin-right:-200px;
+    margin-top: -35px;
+    border:unset;
+    background-color:unset;
+    color:red;
+    cursor: pointer;
+  }
+
+  .image {
+    margin-top: auto;
+    max-width: 110%;
+    height: auto;
+    padding:1px;
+  }
+  
+
+.sci{
+    position: relative;
+    display: flex;
+
+}
+.sci li{
+    list-style: none;
+}
+
+.sci li::before{
+    content: attr(data-text);
+    position: absolute;
+    text-align:center;
+    top:60%;
+    left:50%;
+    transform:translate(-50%,calc(-50% + 80px));
+    font-size:4vh;
+    pointer-events:none;
+    font-weight:700;
+    transition: 0.5s;
+    opacity:0;
+    display: block;
+    width: 100%;
+}
+
+.sci li:hover::before{
+    opacity: 0.1;
+    transform:translate(-50%,calc(-50% + 150px));
+}
+
+.sci li a{
+    position: relative;
+    display: inline-block;
+    width:120px;
+    height:120px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin:20px;
+    font-size:4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+    transition: background 0.25s;
+    cursor: pointer;
+}
+
+.js-tilt-glare{
+    border-radius:10px;
+}
+
+.sci li a:hover.camera{
+    background: #1877f2;
+}
+
+.sci li a:hover.gallery{
+    background: #ff0000;
+}
+
+.sci li a .fa{
+    transition: 0.25s;
+    pointer-events: none;
+}
+.sci li a:hover .fa{
+    color:#fff;
+   transform: scale(1.75) translateZ(40px);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .socialMedia {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: auto;
+    margin: 50px;
+    }
+    
+    .innerBox {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:20px;
+    }
+    
+    .sci li {
+    margin: 20px 0;
+    }
+    }
+
+
+    @media (min-width: 1200px) {
+        .socialMedia {
+          justify-content: space-between;
+          padding: 0 100px;
+        }
+      
+        .innerBox {
+          margin-right: 50px;
+        }
+      }   
+
+    @media screen and (max-width:400px) {
+      .sci{
+        flex-wrap:wrap;
+        flex-direction:row;
+      }
+      .sci li a{
+        width:90px;
+        height:90px;
+        margin:10px;
+      }
+    }  
+
+    
